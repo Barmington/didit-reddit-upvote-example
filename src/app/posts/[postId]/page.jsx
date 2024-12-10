@@ -1,7 +1,8 @@
-import { CommentForm } from "@/components/CommentForm";
-import { CommentList } from "@/components/CommentList";
-import { Vote } from "@/components/Vote";
-import { db } from "@/db";
+import { CommentForm } from '@/components/CommentForm';
+import { CommentList } from '@/components/CommentList';
+import { metadata } from '@/app/layout';
+import { Vote } from '@/components/Vote';
+import { db } from '@/db';
 
 export default async function SinglePostPage({ params }) {
   const postId = params.postId;

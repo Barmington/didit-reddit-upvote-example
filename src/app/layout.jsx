@@ -1,16 +1,31 @@
-import { Inter } from "next/font/google";
-import { UserInfo } from "../components/UserInfo";
+import { Inter } from 'next/font/google';
+import { UserInfo } from '../components/UserInfo';
 
-import "./globals.css";
-import Link from "next/link";
-import { Providers } from "@/Providers";
+import './globals.css';
+import Link from 'next/link';
+import { Providers } from '@/Providers';
+import { metadata } from 'next';
+import { db } from '@/db';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Didit",
-  description: "A social app like Reddit or Hacker News",
+  title: 'Didit',
+
+  description: 'A social app like Reddit or Hacker News',
 };
+
+// export async function generateMetadata({ params }) {
+//   const id = (await params).id;
+//   const result = await db.query('SELECT * FROM posts');
+//   const post = result.rows;
+
+//   return {
+//     title: `${params.post.title}`,
+
+//     description: 'A social app like Reddit or Hacker News',
+//   };
+// }
 
 export default async function RootLayout({ children }) {
   return (
