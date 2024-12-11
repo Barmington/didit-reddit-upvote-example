@@ -4,8 +4,6 @@ import { UserInfo } from '../components/UserInfo';
 import './globals.css';
 import Link from 'next/link';
 import { Providers } from '@/Providers';
-import { metadata } from 'next';
-import { db } from '@/db';
 
 const inter = Inter({ subsets: ['latin'] });
 
